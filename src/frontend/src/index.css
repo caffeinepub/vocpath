@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 97.5% 0.005 90;
+    --foreground: 20% 0.03 255;
+
+    --card: 99% 0.003 90;
+    --card-foreground: 20% 0.03 255;
+
+    --popover: 100% 0 0;
+    --popover-foreground: 20% 0.03 255;
+
+    --primary: 25% 0.06 255;
+    --primary-foreground: 98% 0.005 90;
+
+    --secondary: 93% 0.01 250;
+    --secondary-foreground: 25% 0.06 255;
+
+    --muted: 93% 0.008 250;
+    --muted-foreground: 50% 0.03 255;
+
+    --accent: 72% 0.16 65;
+    --accent-foreground: 18% 0.04 255;
+
+    --destructive: 55% 0.22 25;
+    --destructive-foreground: 98% 0.005 90;
+
+    --border: 88% 0.012 250;
+    --input: 88% 0.012 250;
+    --ring: 72% 0.16 65;
+
+    --radius: 0.5rem;
+
+    --chart-1: 72% 0.16 65;
+    --chart-2: 60% 0.12 200;
+    --chart-3: 55% 0.14 145;
+    --chart-4: 65% 0.13 300;
+    --chart-5: 50% 0.1 25;
+
+    --sidebar: 20% 0.04 255;
+    --sidebar-foreground: 90% 0.005 250;
+    --sidebar-primary: 72% 0.16 65;
+    --sidebar-primary-foreground: 18% 0.04 255;
+    --sidebar-accent: 38% 0.06 255;
+    --sidebar-accent-foreground: 95% 0.005 250;
+    --sidebar-border: 30% 0.04 255;
+    --sidebar-ring: 72% 0.16 65;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .zone-hover {
+    transition: fill 0.2s ease, filter 0.2s ease;
+  }
+
+  .zone-hover:hover {
+    filter: brightness(1.08);
+    cursor: pointer;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.4s ease forwards;
+  }
+  .animate-stagger-1 {
+    animation-delay: 0.05s;
+  }
+  .animate-stagger-2 {
+    animation-delay: 0.1s;
+  }
+  .animate-stagger-3 {
+    animation-delay: 0.15s;
+  }
+  .animate-stagger-4 {
+    animation-delay: 0.2s;
+  }
+  .animate-stagger-5 {
+    animation-delay: 0.25s;
+  }
+  .animate-stagger-6 {
+    animation-delay: 0.3s;
+  }
+}
